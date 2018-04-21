@@ -1179,14 +1179,14 @@ Instead edit gulp/templates/sprite */
 }
 
 .site-header--is-expanded {
-        background-color: rgba(47,85,114, .55);
+        background-color: rgba(#2f5572, .55);
     }
 
 @media (min-width: 800px) {
 
 .site-header {
         position: fixed;
-        background-color: rgba(47,85,114, .3)
+        background-color: rgba(#2f5572, .3)
 }
 
         .site-header--dark {
@@ -1408,7 +1408,7 @@ Instead edit gulp/templates/sprite */
     display: block;
     padding: 5px 8px;
     font-size: .8rem;
-    background-color: rgba(47,85,114, .5);
+    background-color: rgba(#2f5572, .5);
   }
 
 @media (min-width: 800px) {
