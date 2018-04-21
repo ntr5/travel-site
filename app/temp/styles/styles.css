@@ -1043,6 +1043,8 @@ HTML SEMANTICS
 /* Do not edit modules/_sprite directly as it is generated automatically by Gulp. 
 Instead edit gulp/templates/sprite */
 
+/* mustach template file */
+
 .icon {
         background-image: url('/assets/images/sprites/sprite-69f19c2e.svg');
     }
