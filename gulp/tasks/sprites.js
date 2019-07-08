@@ -6,6 +6,11 @@ del = require('del');
 
 // object literal config
 var config = {
+    shape: {
+        spacing: {
+            padding: 1
+        }
+    },
     mode: {
         css: {
             sprite: 'sprite.svg',
