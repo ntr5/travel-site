@@ -69,13 +69,13 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntyr/travel-site.git"
+    "url": "git+https://github.com/ntyr5/travel-site.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ntyr/travel-site/issues"
+    "url": "https://github.com/ntyr5/travel-site/issues"
   },
-  "homepage": "https://github.com/ntyr/travel-site#readme",
+  "homepage": "https://github.com/ntyr5/travel-site#readme",
   "description": ""
 }
