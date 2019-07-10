@@ -57,9 +57,5 @@ gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
     return del('./app/temp/sprite');
 });
 
-<<<<<<< HEAD
 // gulp.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
 gulp.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
-=======
-gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
->>>>>>> browser-support
