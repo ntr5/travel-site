@@ -1,4 +1,3 @@
-// requiring in gulp packages 
 var gulp = require('gulp'),
 svgSprite = require('gulp-svg-sprite'),
 rename = require('gulp-rename'),
@@ -8,29 +7,34 @@ svg2png = require('gulp-svg2png');
 // object literal config
 var config = {
     shape: {
-        spacing: {
-            padding: 1
-        }
+      spacing: {
+        padding: 1
+      }
     },
     mode: {
-        css: {
-            sprite: 'sprite.svg',
-            render: {
-                css: {
-                    template: './gulp/templates/sprite.css'
-                }
+      css: {
+        variables: {
+          replaceSvgWithPng: function() {
+            return function(sprite, render) {
+              return render(sprite).split('.svg').join('.png');
             }
+          }
+        },
+        sprite: 'sprite.svg',
+        render: {
+          css: {
+            template: './gulp/templates/sprite.css'
+          }
         }
+      }
     }
-};
-
+  }
 
 gulp.task('beginClean', function() {
     return del(['./app/temp/sprite', './app/assets/images/sprites']);
 });
 
 gulp.task('createSprite', ['beginClean'], function() {
-// gulp.task('createSprite', function() {
     return gulp.src('./app/assets/images/icons/**/*svg')
         .pipe(svgSprite(config)) // pass the svgSprite package options to transform the svg icons into one sprite svg icons image
         .pipe(gulp.dest('./app/temp/sprite/'));
@@ -57,5 +61,4 @@ gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
     return del('./app/temp/sprite');
 });
 
-// gulp.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
-gulp.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
+gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
